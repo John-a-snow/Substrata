@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Slackey&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root .{
+    --bg-primary: #f6f3eb;
+    --bg-accent-coral-dark: #c93232;
+    --bg-ink: #181214;
+    --bg-card: #ffffff;
+
+    --color-white: #ffffff;
+    --color-offwhite: #fbf8f2;
+    --color-muted: #6b6360;
+    --color-ink: #181214;
+    --color-yellow: #e6a71e;
+    --color-mint: #10b981;
+    --color-danger: #c93232;
+
+    --font-display: 'Jaro', 'Slackey', impact, sans-serif;
+    --font-fun: 'Slackey', cursive, sans-serif;
+    --font-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    --font-moto: 'JetBrains Mono', monospace;
+
+    --shadow-retro: 4px 4px 0px #181214;
+    --shadow-retro-sm: 2px 2px 0px #181214;
+    --shadow-retro-lg: 6px 6px 0px #181214;
+    
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-pill: 9999px;
+
+    --transition-fast: 0.15s ease;
+    --transition-smooth: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    background-color: var(--bg-primary);
+    color: var(--color-ink);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    background-image:
+      linear-gradient(rgba(246, 243, 235, 0.45), rgba(246, 243, 235, 0.45)),
+      url('assets/rough-paper.jpg');
+    background-repeat: repeat;
+    background-size: 550px 550px;
+    color: var(--color-ink);
+    line-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialised;
+}
+
+main {
+    flex: 1;
+    position: relative;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color:  rgba(246, 243, 235, 0.94);
+    background-image:
+        linear-gradient: rgba(246, 243, 235, 0.6), rgba(246, 243, 235, 0.6)),
+        url()
