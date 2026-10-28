@@ -77,5 +77,57 @@ main {
     padding: 1rem 2rem;
     background-color:  rgba(246, 243, 235, 0.94);
     background-image:
-        linear-gradient: rgba(246, 243, 235, 0.6), rgba(246, 243, 235, 0.6)),
-        url()
+        linear-gradient(rgba(246, 243, 235, 0.6), rgba(246, 243, 235, 0.6)),
+        url('assets/rough-paper.jpg');
+    background-size: 550px 550px;
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid var(--bg-ink);
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.brand-title {
+    font-family: var(--font-display);
+    font-size: 1.85rem;
+    letter-spacing: 0.05em;
+    color: var(--bg-accent-coral);
+    -webkit-text-stroke: 1.5px var(--bg-ink);
+    text-shadow: 2px 2px 0px var(-bg-ink);
+    line-height: 1;
+}
+
+.nav-pills {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    list-style: none;
+}
+
+.nav-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: var(--bg-ink);
+    color: var(--color-white);
+    font-family: var(--font-fun);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    padding: 0.45rem 1.15rem;
+    border-radius: 4px;
+    border: 2px solid var(--bg-ink);
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px rgba(24, 18, 20, 0.35);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    user-select: none;
+}
+
+.nav-link-btn:hover {
+    background-color: #271f22;
+    border-color: var(--bg-accent-coral);
+    
