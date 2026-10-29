@@ -130,4 +130,120 @@ main {
 .nav-link-btn:hover {
     background-color: #271f22;
     border-color: var(--bg-accent-coral);
+    transform: translateY(-2px);
+    box-shadow: 2px 4px 0px var(--bg-ink);
+}
+
+.nav-link-btn.active {
+    background-color: var(--bg-ink);
+    color: var(_-color-white);
+    border-color: var(--bg-accent-coral);
+    box-shadow: 0 0 0 1.5px var(--bg-accent-coral), 2px 2px 0px var(--bg-ink);
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.app-view {
+    display: none;
+}
+
+.app-view-active {
+    display: block;
+    animation: viewEntrance 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes viewEntrance {
+    0% { opacity: 0; transform: translateY(12px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+body.home-view-active {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+body.home-view-active main {
+    height: calc(100vh - 68px - 48px);
+    height: calc(100dvh - 68px - 48px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+body.home-active #view-home {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body.home-view-active .hero-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    overflow: hidden;
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    padding: 4.5rem 1.5rem 3.5rem;
+}
+
+.hero-emblem-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    z-index: 2;
+}
+
+.hero-emblem-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(4px 6px 0px #181214);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
+    cursor: pointer;
+    animation: emblemFloat 5s ease-in-out infinite;
+}
+
+@keyframes embleFloat {
+    0% 100% { transform: translateY(0); filter: drop-shadow(4px 6px 0px #181214); }
+    50% { transform: translateY(-8px); filter: drop-shadow(4px 14px 0px #181214); }
+}
+
+.hero-emblem-badge:hover {
+    transform: translateY(-10px) scale(1.05);
+    filter: drop-shadow(6px 16px 0px #181214);
+    animation-play-state: paused;
+}
+
+.stego-emblem-svg {
+    display: block;
+}
+
+.pixel-bit {
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.bit-coral-1, .bit-coral-2 { animation: pulseBitCoral 4s ease-in-out infinite; }
+.bit-mint-1, .bit-mint-2 { animation: pulseBitMint 4.5s ease-in-out infinite 1.6s; }
+
+@keyframes pulseBitCoral {
+    0% 100% { opacity: 0.9; }
+        50% { opacity: 1; filter: drop-shadow(0 0 3px rgba(201, 50, 50, 0.8)); }
+}
+
+@keyframes pulseBitMint {
+    0% 100% { opacity: 0.9; }
+    50% { opacity: 1; filter: drop-shadow(0 0 3px rgba(16, 185, 129, 0.8); }
+}
+
+@-o-keyframes pulseBitYellow {
     
